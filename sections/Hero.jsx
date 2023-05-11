@@ -1,51 +1,53 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import styles from '../styles'
 import { slideIn, staggerContainer, textVariant } from '../utils/motion'
+import { motion } from 'framer-motion'
 
 const Hero = () => (
-  <section className={`${styles.yPaddings} sm:pl-16 pl-6`}>
+  <section className='xs:py-8 py-12 pl-6 sm:py-16 sm:pl-16'>
     <motion.div
       variants={staggerContainer}
-      initial="hidden"
-      whileInView="show"
+      initial='hidden'
+      whileInView='show'
       viewport={{ once: false, amount: 0.25 }}
-      className={`${styles.innerWidth} mx-auto flex flex-col`}
+      className='mx-auto flex w-full flex-col 2xl:max-w-[1280px]'
     >
-      <div className="flex justify-center items-center flex-col relative z-10">
-        <motion.h1 variants={textVariant(1.1)} className={styles.heroHeading}>
+      <div className='relative z-10 flex flex-col items-center justify-center'>
+        <motion.h1
+          variants={textVariant(1.1)}
+          className='text-[44px] font-bold uppercase leading-[64.4px] text-white sm:text-[60px] sm:leading-[74.4px] md:text-[100px] md:leading-[114.4px] lg:text-[144px] lg:leading-[158.4px]'
+        >
           Metaverse
         </motion.h1>
         <motion.div
           variants={textVariant(1.2)}
-          className="flex flex-row justify-center items-center lg:ml-1.5 md:ml-1.5 sm:ml-1 ml-1"
+          className=' ml-1 flex flex-row items-center justify-center sm:ml-1 md:ml-1.5 lg:ml-1.5'
         >
-          <h1 className="font-bold lg:text-[144px] md:text-[100px] sm:text-[60px] text-[44px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white">
+          <h1 className='text-[44px] font-bold uppercase leading-[64.4px] text-white sm:text-[60px] sm:leading-[74.4px] md:text-[100px] md:leading-[114.4px] lg:text-[144px] lg:leading-[158.4px]'>
             Ma
           </h1>
-          <div className="lg:w-[230px] lg:h-[107px] lg:mt-2 lg:border-[19px] md:w-[161px] md:h-[75px] md:mt-[6px] md:border-[15px] sm:h-[44px] sm:w-[96px] sm:border-[8px] sm:ml-1 w-[66px] h-[33px] mx-[6px] mt-0.5 border-[6px] rounded-r-[50px] border-white" />
-          <h1 className="-ml-1 sm:-ml-1.5 sm:text-[60px] font-bold lg:text-[144px] md:text-[100px] text-[44px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white">
+          <div className='mx-[6px] mt-0.5 h-[33px] w-[66px] rounded-r-[50px] border-[6px] border-white sm:ml-1 sm:h-[44px] sm:w-[96px] sm:border-[8px] md:mt-[6px] md:h-[75px] md:w-[161px] md:border-[15px] lg:mt-2 lg:h-[107px] lg:w-[230px] lg:border-[19px]' />
+          <h1 className='-ml-1 text-[44px] font-bold uppercase leading-[64.4px] text-white sm:-ml-1.5 sm:text-[60px] sm:leading-[74.4px] md:text-[100px] md:leading-[114.4px] lg:text-[144px] lg:leading-[158.4px]'>
             Ness
           </h1>
         </motion.div>
       </div>
       <motion.div
         variants={slideIn('right', 'tween', 0.2, 1)}
-        className="relative w-full md:-mt-[20px] -mt-[12px]"
+        className='relative -mt-[12px] w-full md:-mt-[20px]'
       >
-        <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-[0] -top-[30px]" />
+        <div className='hero-gradient absolute -top-[30px] z-[0] h-[300px] w-full rounded-tl-[140px]' />
         <img
-          src="/cover.png"
-          alt="cover"
-          className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
+          src='/cover.png'
+          alt='cover'
+          className='relative z-10 h-[350px] w-full rounded-tl-[140px] object-cover sm:h-[500px]'
         />
-        <a href="#explore">
-          <div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10">
+        <a href='#explore'>
+          <div className='relative z-10 -mt-[50px] flex w-full justify-end pr-[40px] sm:-mt-[70px]'>
             <img
-              src="/stamp.png"
-              alt="stamp"
-              className="sm:w-[155px] w-[100px] sm:h-[155px] h-[100px] object-contain"
+              src='/stamp.png'
+              alt='stamp'
+              className='h-[100px] w-[100px] object-contain sm:h-[155px] sm:w-[155px]'
             />
           </div>
         </a>

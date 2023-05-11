@@ -12,12 +12,6 @@ const styles = {
   flexStart: 'flex justify-start items-start',
   flexEnd: 'flex justify-end',
   navPadding: 'pt-[98px]',
-
-  // hero section
-  heroHeading:
-    'font-bold lg:text-[144px] md:text-[100px] sm:text-[60px] text-[44px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white',
-  heroDText:
-    'lg:w-[220px] lg:h-[107px] lg:mt-2 md:w-[150px] sm:w-[80px] w-[60px] md:h-[75px] md:mt-[6px] h-[33px] mt-0.5 md:border-[18px] border-[9px] rounded-r-[50px] border-white sm:mx-2 mx-[6px]',
 }
 
 export default styles
