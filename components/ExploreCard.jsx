@@ -17,7 +17,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
       className='absolute h-full w-full rounded-3xl object-cover'
     />
     {active !== id ? (
-      <h3 className='absolute right-[51px] top-0 z-10 whitespace-nowrap rounded-br-3xl rounded-tl-3xl bg-[rgba(0,0,0,0.6)] px-7 py-2 text-lg font-semibold text-white sm:text-3xl lg:origin-top-right lg:-rotate-90 '>
+      <h3 className='absolute right-0 bottom-0 z-10 h-[52px] whitespace-nowrap rounded-br-3xl rounded-tl-3xl bg-[rgba(0,0,0,0.6)] px-7 py-2 text-lg font-semibold text-white sm:text-3xl lg:top-0 lg:right-[51px] lg:origin-top-right lg:-rotate-90 '>
         {title}
       </h3>
     ) : (
