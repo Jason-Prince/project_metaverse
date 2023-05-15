@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { staggerContainer, fadeIn } from '../utils/motion'
+import { staggerContainer, fadeIn, zoomIn } from '../utils/motion'
 import { TitleText, TypingText } from '../components'
 
 const World = () => (
@@ -32,50 +32,65 @@ const World = () => (
           alt='map'
           className='invisible h-full w-full object-cover lg:visible'
         />
-        <div className='invisible absolute bottom-28 right-9 h-[70px] w-[70px] rounded-full bg-[#5d6680] p-[6px] shadow-[0_10px_30px_rgba(0,_0,_0)] lg:visible'>
+        <motion.div
+          variants={zoomIn(1.8, 1)}
+          className='invisible absolute bottom-28 right-9 h-[70px] w-[70px] rounded-full bg-[#5d6680] p-[6px] shadow-[0_10px_30px_rgba(0,_0,_0)] lg:visible'
+        >
           <img
             src='/people-01.png'
             alt='people'
             className='relative z-10 h-full w-full'
           />
           <div className='absolute left-6 top-[54px] z-0 h-6 w-6 rotate-45 rounded-br-lg border-[12px] border-[#5d6680]' />
-        </div>
-        <div className='invisible absolute top-10 left-28 h-[70px] w-[70px] rounded-full bg-[#5d6680] p-[6px] shadow-[0_10px_30px_rgba(0,_0,_0)] lg:visible'>
+        </motion.div>
+        <motion.div
+          variants={zoomIn(1.6, 1)}
+          className='invisible absolute top-10 left-28 h-[70px] w-[70px] rounded-full bg-[#5d6680] p-[6px] shadow-[0_10px_30px_rgba(0,_0,_0)] lg:visible'
+        >
           <img
             src='/people-02.png'
             alt='people'
             className='relative z-10 h-full w-full'
           />
           <div className='absolute left-6 top-[54px] z-0 h-6 w-6 rotate-45 rounded-br-lg border-[12px] border-[#5d6680]' />
-        </div>
-        <div className='invisible absolute top-1/2 left-[45%] h-[70px] w-[70px] rounded-full bg-[#5d6680] p-[6px] shadow-[0_10px_30px_rgba(0,_0,_0)] lg:visible'>
+        </motion.div>
+        <motion.div
+          variants={zoomIn(1.4, 1)}
+          className='invisible absolute top-1/2 left-[45%] h-[70px] w-[70px] rounded-full bg-[#5d6680] p-[6px] shadow-[0_10px_30px_rgba(0,_0,_0)] lg:visible'
+        >
           <img
             src='/people-03.png'
             alt='people'
             className='relative z-10 h-full w-full'
           />
           <div className='absolute left-6 top-[54px] z-0 h-6 w-6 rotate-45 rounded-br-lg border-[12px] border-[#5d6680]' />
-        </div>
-        <div className='invisible absolute top-44 left-36 h-[167px] w-[217px] rounded-3xl bg-[#5d6680] p-[6px] shadow-[0_10px_30px_rgba(0,_0,_0)] lg:visible'>
+        </motion.div>
+        <motion.div
+          variants={zoomIn(1.2, 1)}
+          className='invisible absolute top-44 left-36 h-[167px] w-[217px] rounded-3xl bg-[#5d6680] p-[6px] shadow-[0_10px_30px_rgba(0,_0,_0)] lg:visible'
+        >
           <img
             src='/the_upside_down.png'
             alt='The Upside Down'
             className='relative z-10 h-full w-full rounded-3xl'
           />
-          <h2 className='absolute bottom-4 left-0 right-0 z-10 mx-auto text-center text-lg font-bold leading-6 text-white'>
+          <h2 className='absolute bottom-4 left-0 right-0 z-10 mx-auto whitespace-nowrap text-center text-lg font-bold leading-6 text-white'>
             The Upside Down
           </h2>
-        </div>
-        <div className='invisible absolute top-10 right-52 h-[167px] w-[217px] rounded-3xl bg-[#5d6680] p-[6px] shadow-[0_10px_30px_rgba(0,_0,_0)] lg:visible'>
+        </motion.div>
+        <motion.div
+          variants={zoomIn(1, 1)}
+          className='invisible absolute top-10 right-52 h-[167px] w-[217px] rounded-3xl bg-[#5d6680] p-[6px] shadow-[0_10px_30px_rgba(0,_0,_0)] lg:visible'
+        >
           <img
             src='/hawkins_labs.png'
             alt='Hawkins Labs'
             className='relative z-10 h-full w-full rounded-3xl'
           />
           <h2 className='absolute bottom-4 left-0 right-0 z-10 mx-auto text-center text-lg font-bold leading-6 text-white'>
-            The Upside Down
+            Hawkin's Labs
           </h2>
-        </div>
+        </motion.div>
       </motion.div>
     </motion.div>
   </section>

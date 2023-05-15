@@ -1,10 +1,10 @@
 'use client'
 
-import { slideIn, staggerContainer, textVariant } from '../utils/motion'
+import { fadeIn, slideIn, staggerContainer, textVariant } from '../utils/motion'
 import { motion } from 'framer-motion'
 
 const Hero = () => (
-  <section className='xs:py-8 py-12 pl-6 sm:py-16 sm:pl-16'>
+  <section className='xs:py-8 py-12 pl-6 sm:py-16'>
     <motion.div
       variants={staggerContainer}
       initial='hidden'
@@ -33,7 +33,7 @@ const Hero = () => (
         </motion.div>
       </div>
       <motion.div
-        variants={slideIn('right', 'tween', 0.2, 1)}
+        variants={fadeIn('down', 'tween', 0.2, 1)}
         className='relative -mt-[12px] w-full md:-mt-[20px]'
       >
         <div className='hero-gradient absolute -top-[30px] z-[0] h-[300px] w-full rounded-tl-[140px]' />
